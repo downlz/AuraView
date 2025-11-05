@@ -1,0 +1,58 @@
+[
+    {
+        "merged": "com.auraview.adblocker.app-debug-45:/drawable_btn_vpn_toggle.xml.flat",
+        "source": "com.auraview.adblocker.app-main-47:/drawable/btn_vpn_toggle.xml"
+    },
+    {
+        "merged": "com.auraview.adblocker.app-debug-45:/mipmap-mdpi_ic_launcher.xml.flat",
+        "source": "com.auraview.adblocker.app-main-47:/mipmap-mdpi/ic_launcher.xml"
+    },
+    {
+        "merged": "com.auraview.adblocker.app-debug-45:/layout_fragment_settings.xml.flat",
+        "source": "com.auraview.adblocker.app-main-47:/layout/fragment_settings.xml"
+    },
+    {
+        "merged": "com.auraview.adblocker.app-debug-45:/layout_fragment_home.xml.flat",
+        "source": "com.auraview.adblocker.app-main-47:/layout/fragment_home.xml"
+    },
+    {
+        "merged": "com.auraview.adblocker.app-debug-45:/layout_activity_main.xml.flat",
+        "source": "com.auraview.adblocker.app-main-47:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.auraview.adblocker.app-debug-45:/layout_fragment_filter_management.xml.flat",
+        "source": "com.auraview.adblocker.app-main-47:/layout/fragment_filter_management.xml"
+    },
+    {
+        "merged": "com.auraview.adblocker.app-debug-45:/layout_fragment_statistics.xml.flat",
+        "source": "com.auraview.adblocker.app-main-47:/layout/fragment_statistics.xml"
+    },
+    {
+        "merged": "com.auraview.adblocker.app-debug-45:/xml_backup_rules.xml.flat",
+        "source": "com.auraview.adblocker.app-main-47:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "com.auraview.adblocker.app-debug-45:/drawable_btn_primary.xml.flat",
+        "source": "com.auraview.adblocker.app-main-47:/drawable/btn_primary.xml"
+    },
+    {
+        "merged": "com.auraview.adblocker.app-debug-45:/drawable_banner.xml.flat",
+        "source": "com.auraview.adblocker.app-main-47:/drawable/banner.xml"
+    },
+    {
+        "merged": "com.auraview.adblocker.app-debug-45:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "com.auraview.adblocker.app-main-47:/drawable/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.auraview.adblocker.app-debug-45:/drawable_setting_background.xml.flat",
+        "source": "com.auraview.adblocker.app-main-47:/drawable/setting_background.xml"
+    },
+    {
+        "merged": "com.auraview.adblocker.app-debug-45:/layout_item_filter.xml.flat",
+        "source": "com.auraview.adblocker.app-main-47:/layout/item_filter.xml"
+    },
+    {
+        "merged": "com.auraview.adblocker.app-debug-45:/xml_data_extraction_rules.xml.flat",
+        "source": "com.auraview.adblocker.app-main-47:/xml/data_extraction_rules.xml"
+    }
+]

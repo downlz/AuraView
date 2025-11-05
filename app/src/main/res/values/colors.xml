@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary Colors -->
+    <color name="primary">#1976D2</color>
+    <color name="primary_dark">#1565C0</color>
+    <color name="primary_light">#42A5F5</color>
+
+    <!-- Secondary Colors -->
+    <color name="secondary">#FF6F00</color>
+    <color name="secondary_dark">#E65100</color>
+    <color name="secondary_light">#FF8F00</color>
+
+    <!-- Background Colors -->
+    <color name="background">#121212</color>
+    <color name="background_dark">#000000</color>
+    <color name="background_light">#1E1E1E</color>
+    <color name="surface">#1E1E1E</color>
+    <color name="surface_variant">#2D2D2D</color>
+
+    <!-- Text Colors -->
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#B3B3B3</color>
+    <color name="text_hint">#757575</color>
+
+    <!-- Status Colors -->
+    <color name="success">#4CAF50</color>
+    <color name="warning">#FF9800</color>
+    <color name="error">#F44336</color>
+    <color name="info">#2196F3</color>
+
+    <!-- VPN Status Colors -->
+    <color name="vpn_active">#4CAF50</color>
+    <color name="vpn_inactive">#F44336</color>
+    <color name="vpn_connecting">#FF9800</color>
+
+    <!-- Basic Colors -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="transparent">#00000000</color>
+
+    <!-- Card Colors -->
+    <color name="card_background">#2D2D2D</color>
+    <color name="card_border">#424242</color>
+
+    <!-- Button Colors -->
+    <color name="btn_primary">#1976D2</color>
+    <color name="btn_primary_pressed">#1565C0</color>
+    <color name="btn_secondary">#FF6F00</color>
+    <color name="btn_disabled">#424242</color>
+
+    <!-- Filter Status Colors -->
+    <color name="filter_enabled">#4CAF50</color>
+    <color name="filter_disabled">#757575</color>
+    <color name="filter_updating">#FF9800</color>
+</resources>

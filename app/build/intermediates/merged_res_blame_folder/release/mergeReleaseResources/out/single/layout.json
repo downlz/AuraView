@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "com.auraview.adblocker.app-mergeReleaseResources-44:/layout/activity_main.xml",
+        "source": "com.auraview.adblocker.app-main-46:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.auraview.adblocker.app-mergeReleaseResources-44:/layout/item_filter.xml",
+        "source": "com.auraview.adblocker.app-main-46:/layout/item_filter.xml"
+    },
+    {
+        "merged": "com.auraview.adblocker.app-mergeReleaseResources-44:/layout/fragment_settings.xml",
+        "source": "com.auraview.adblocker.app-main-46:/layout/fragment_settings.xml"
+    },
+    {
+        "merged": "com.auraview.adblocker.app-mergeReleaseResources-44:/layout/fragment_filter_management.xml",
+        "source": "com.auraview.adblocker.app-main-46:/layout/fragment_filter_management.xml"
+    },
+    {
+        "merged": "com.auraview.adblocker.app-mergeReleaseResources-44:/layout/fragment_statistics.xml",
+        "source": "com.auraview.adblocker.app-main-46:/layout/fragment_statistics.xml"
+    },
+    {
+        "merged": "com.auraview.adblocker.app-mergeReleaseResources-44:/layout/fragment_home.xml",
+        "source": "com.auraview.adblocker.app-main-46:/layout/fragment_home.xml"
+    }
+]

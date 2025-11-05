@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.auraview.adblocker.app-mergeDebugResources-43:/values-v19/values-v19.xml",
+            "map": [
+                {
+                    "source": "/Users/shahnawaz/.gradle/caches/8.13/transforms/e5dde8f013da89fe4be18d6aeda3cce4/transformed/leanback-1.2.0-alpha04/res/values-v19/values-v19.xml",
+                    "from": {
+                        "startLines": "2,17",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,972",
+                        "endLines": "16,25",
+                        "endColumns": "12,12",
+                        "endOffsets": "967,1576"
+                    }
+                }
+            ]
+        }
+    ]
+}

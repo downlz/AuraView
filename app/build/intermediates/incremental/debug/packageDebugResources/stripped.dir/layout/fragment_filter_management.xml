@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fillViewport="true"
+    android:scrollbars="none"
+    tools:context=".ui.fragments.FilterManagementFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="32dp">
+
+        <!-- Header -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            android:gravity="center"
+            android:text="@string/menu_filters"
+            android:textColor="@color/text_primary"
+            android:textSize="36sp"
+            android:textStyle="bold" />
+
+        <!-- Filter List -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/filter_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:layout_marginBottom="32dp"
+            android:background="@color/surface"
+            android:padding="16dp"
+            tools:itemCount="5"
+            tools:listitem="@layout/item_filter" />
+
+        <!-- Last Update Info -->
+        <TextView
+            android:id="@+id/last_update_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            android:gravity="center"
+            android:text="@string/msg_filters_updated"
+            android:textColor="@color/text_secondary"
+            android:textSize="16sp" />
+
+        <!-- Action Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/update_all_button"
+                style="@style/AuraViewButton"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_marginEnd="16dp"
+                android:layout_weight="1"
+                android:text="@string/btn_update_filters"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/back_button"
+                style="@style/AuraViewButton"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="16dp"
+                android:layout_weight="1"
+                android:text="@string/menu_home"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

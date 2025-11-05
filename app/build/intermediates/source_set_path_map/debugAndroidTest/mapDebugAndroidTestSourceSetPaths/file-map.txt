@@ -1,0 +1,7 @@
+com.auraview.adblocker.test.app-core-1.5.0-0 /Users/shahnawaz/.gradle/caches/8.13/transforms/281c11aabea793824388f21989238770/transformed/core-1.5.0/res
+com.auraview.adblocker.test.app-annotation-experimental-1.3.0-1 /Users/shahnawaz/.gradle/caches/8.13/transforms/af7d8117902eb7033a9b26022d218887/transformed/annotation-experimental-1.3.0/res
+com.auraview.adblocker.test.app-androidTest-2 /Users/shahnawaz/Desktop/AuraView/app/build/generated/res/resValues/androidTest/debug
+com.auraview.adblocker.test.app-updated_navigation_xml-3 /Users/shahnawaz/Desktop/AuraView/app/build/generated/updated_navigation_xml/debugAndroidTest
+com.auraview.adblocker.test.app-mergeDebugAndroidTestResources-4 /Users/shahnawaz/Desktop/AuraView/app/build/intermediates/incremental/debugAndroidTest/mergeDebugAndroidTestResources/merged.dir
+com.auraview.adblocker.test.app-mergeDebugAndroidTestResources-5 /Users/shahnawaz/Desktop/AuraView/app/build/intermediates/incremental/debugAndroidTest/mergeDebugAndroidTestResources/stripped.dir
+com.auraview.adblocker.test.app-debugAndroidTest-6 /Users/shahnawaz/Desktop/AuraView/app/build/intermediates/merged_res/debugAndroidTest/mergeDebugAndroidTestResources

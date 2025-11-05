@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 8.13.0" type="conditional_incidents">
+
+    <incident
+        id="GestureBackNavigation"
+        severity="warning"
+        message="`onBackPressed` is no longer called for back gestures; migrate to AndroidX&apos;s backward compatible `OnBackPressedDispatcher`">
+        <show-url
+            description="Show https://developer.android.com/guide/navigation/custom-back/predictive-back-gesture"
+            url="https://developer.android.com/guide/navigation/custom-back/predictive-back-gesture"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/auraview/adblocker/ui/MainActivity.kt"
+            line="175"
+            column="18"
+            startOffset="5352"
+            endLine="175"
+            endColumn="31"
+            endOffset="5365"/>
+    </incident>
+
+    <incident
+        id="NewApi"
+        severity="error"
+        message="">
+        <fix-data minSdk="21-∞" requiresApi="23-∞"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/auraview/adblocker/ui/fragments/HomeFragment.kt"
+            line="100"
+            column="58"
+            startOffset="3337"
+            endLine="100"
+            endColumn="66"
+            endOffset="3345"/>
+        <map>
+            <entry
+                name="desc"
+                string="(ILandroid.content.res.Resources.Theme;)"/>
+            <entry
+                name="message"
+                string="Call requires API level 23 (current min is %1$s): `android.content.res.Resources#getColor`"/>
+            <api-levels id="minSdk"
+                value="21-∞"/>
+            <entry
+                name="name"
+                string="getColor"/>
+            <entry
+                name="owner"
+                string="android.content.res.Resources"/>
+            <api-levels id="requiresApi"
+                value="23-∞"/>
+        </map>
+    </incident>
+
+    <incident
+        id="NewApi"
+        severity="error"
+        message="">
+        <fix-data minSdk="21-∞" requiresApi="23-∞"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/auraview/adblocker/ui/fragments/HomeFragment.kt"
+            line="106"
+            column="58"
+            startOffset="3711"
+            endLine="106"
+            endColumn="66"
+            endOffset="3719"/>
+        <map>
+            <entry
+                name="desc"
+                string="(ILandroid.content.res.Resources.Theme;)"/>
+            <entry
+                name="message"
+                string="Call requires API level 23 (current min is %1$s): `android.content.res.Resources#getColor`"/>
+            <api-levels id="minSdk"
+                value="21-∞"/>
+            <entry
+                name="name"
+                string="getColor"/>
+            <entry
+                name="owner"
+                string="android.content.res.Resources"/>
+            <api-levels id="requiresApi"
+                value="23-∞"/>
+        </map>
+    </incident>
+
+    <incident
+        id="NewApi"
+        severity="error"
+        message="">
+        <fix-data minSdk="21-∞" requiresApi="23-∞"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/auraview/adblocker/ui/fragments/HomeFragment.kt"
+            line="112"
+            column="58"
+            startOffset="4094"
+            endLine="112"
+            endColumn="66"
+            endOffset="4102"/>
+        <map>
+            <entry
+                name="desc"
+                string="(ILandroid.content.res.Resources.Theme;)"/>
+            <entry
+                name="message"
+                string="Call requires API level 23 (current min is %1$s): `android.content.res.Resources#getColor`"/>
+            <api-levels id="minSdk"
+                value="21-∞"/>
+            <entry
+                name="name"
+                string="getColor"/>
+            <entry
+                name="owner"
+                string="android.content.res.Resources"/>
+            <api-levels id="requiresApi"
+                value="23-∞"/>
+        </map>
+    </incident>
+
+    <incident
+        id="NewApi"
+        severity="error"
+        message="">
+        <fix-data minSdk="21-∞" requiresApi="23-∞"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/auraview/adblocker/ui/fragments/HomeFragment.kt"
+            line="118"
+            column="58"
+            startOffset="4461"
+            endLine="118"
+            endColumn="66"
+            endOffset="4469"/>
+        <map>
+            <entry
+                name="desc"
+                string="(ILandroid.content.res.Resources.Theme;)"/>
+            <entry
+                name="message"
+                string="Call requires API level 23 (current min is %1$s): `android.content.res.Resources#getColor`"/>
+            <api-levels id="minSdk"
+                value="21-∞"/>
+            <entry
+                name="name"
+                string="getColor"/>
+            <entry
+                name="owner"
+                string="android.content.res.Resources"/>
+            <api-levels id="requiresApi"
+                value="23-∞"/>
+        </map>
+    </incident>
+
+    <incident
+        id="NewApi"
+        severity="error"
+        message="">
+        <fix-data minSdk="21-∞" requiresApi="23-∞"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/auraview/adblocker/ui/fragments/HomeFragment.kt"
+            line="124"
+            column="58"
+            startOffset="4818"
+            endLine="124"
+            endColumn="66"
+            endOffset="4826"/>
+        <map>
+            <entry
+                name="desc"
+                string="(ILandroid.content.res.Resources.Theme;)"/>
+            <entry
+                name="message"
+                string="Call requires API level 23 (current min is %1$s): `android.content.res.Resources#getColor`"/>
+            <api-levels id="minSdk"
+                value="21-∞"/>
+            <entry
+                name="name"
+                string="getColor"/>
+            <entry
+                name="owner"
+                string="android.content.res.Resources"/>
+            <api-levels id="requiresApi"
+                value="23-∞"/>
+        </map>
+    </incident>
+
+    <incident
+        id="NewApi"
+        severity="error"
+        message="">
+        <fix-data minSdk="21-∞" requiresApi="24-∞"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/auraview/adblocker/stats/QueryLogger.kt"
+            line="145"
+            column="32"
+            startOffset="4761"
+            endLine="145"
+            endColumn="47"
+            endOffset="4776"/>
+        <map>
+            <entry
+                name="desc"
+                string="(Ljava.lang.Object;Ljava.util.function.Function;)"/>
+            <entry
+                name="message"
+                string="Call requires API level 24 (current min is %1$s): `java.util.concurrent.ConcurrentHashMap#computeIfAbsent`"/>
+            <api-levels id="minSdk"
+                value="21-∞"/>
+            <entry
+                name="name"
+                string="computeIfAbsent"/>
+            <entry
+                name="owner"
+                string="java.util.concurrent.ConcurrentHashMap"/>
+            <api-levels id="requiresApi"
+                value="24-∞"/>
+        </map>
+    </incident>
+
+    <incident
+        id="ForegroundServiceType"
+        severity="error"
+        message="To call `Service.startForeground()`, the `&lt;service>` element of manifest file must have the `foregroundServiceType` attribute specified">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/auraview/adblocker/vpn/AuraViewVpnService.kt"
+            line="89"
+            column="17"
+            startOffset="2858"
+            endLine="89"
+            endColumn="32"
+            endOffset="2873"/>
+        <map>
+            <condition targetGE="34"/>
+        </map>
+    </incident>
+
+    <incident
+        id="ObsoleteSdkInt"
+        severity="warning"
+        message="Unnecessary; `SDK_INT` is always >= 31">
+        <fix-replace
+            description="Delete tools:targetApi"
+            replacement=""
+            priority="0">
+            <range
+                file="${:app*debug*MAIN*sourceProvider*0*manifest*0}"
+                startOffset="1136"
+                endOffset="1156"/>
+        </fix-replace>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*manifest*0}"
+            line="28"
+            column="9"
+            startOffset="1136"
+            endLine="28"
+            endColumn="29"
+            endOffset="1156"/>
+        <map>
+            <condition minGE="31-∞"/>
+        </map>
+    </incident>
+
+    <incident
+        id="ObsoleteSdkInt"
+        severity="warning"
+        message="Unnecessary; `SDK_INT` is always >= 21">
+        <fix-replace
+            description="Delete tools:targetApi"
+            replacement=""
+            priority="0">
+            <range
+                file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/themes.xml"
+                startOffset="691"
+                endOffset="710"/>
+        </fix-replace>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/themes.xml"
+            line="13"
+            column="45"
+            startOffset="691"
+            endLine="13"
+            endColumn="64"
+            endOffset="710"/>
+        <map>
+            <condition minGE="21-∞"/>
+        </map>
+    </incident>
+
+</incidents>

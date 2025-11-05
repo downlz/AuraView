@@ -1,0 +1,715 @@
+/Users/shahnawaz/Desktop/AuraView/app/src/main/java/com/auraview/adblocker/ui/fragments/HomeFragment.kt:157: Warning: Implicitly using the default locale is a common source of bugs: Use String.format(Locale, ...) instead [DefaultLocale]
+            gb >= 1 -> getString(R.string.bandwidth_saved, String.format("%.1f GB", gb))
+                                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/shahnawaz/Desktop/AuraView/app/src/main/java/com/auraview/adblocker/ui/fragments/HomeFragment.kt:158: Warning: Implicitly using the default locale is a common source of bugs: Use String.format(Locale, ...) instead [DefaultLocale]
+            mb >= 1 -> getString(R.string.bandwidth_saved, String.format("%.1f MB", mb))
+                                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/shahnawaz/Desktop/AuraView/app/src/main/java/com/auraview/adblocker/ui/fragments/HomeFragment.kt:159: Warning: Implicitly using the default locale is a common source of bugs: Use String.format(Locale, ...) instead [DefaultLocale]
+            kb >= 1 -> getString(R.string.bandwidth_saved, String.format("%.1f KB", kb))
+                                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/shahnawaz/Desktop/AuraView/app/src/main/java/com/auraview/adblocker/ui/fragments/HomeFragment.kt:160: Warning: Implicitly using the default locale is a common source of bugs: Use String.format(Locale, ...) instead [DefaultLocale]
+            else -> getString(R.string.bandwidth_saved, String.format("%d B", bytes))
+                                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/shahnawaz/Desktop/AuraView/app/src/main/java/com/auraview/adblocker/vpn/VpnStateManager.kt:129: Warning: Implicitly using the default locale is a common source of bugs: Use String.format(Locale, ...) instead [DefaultLocale]
+            hours > 0 -> String.format("%dh %dm", hours, minutes % 60)
+                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/shahnawaz/Desktop/AuraView/app/src/main/java/com/auraview/adblocker/vpn/VpnStateManager.kt:130: Warning: Implicitly using the default locale is a common source of bugs: Use String.format(Locale, ...) instead [DefaultLocale]
+            minutes > 0 -> String.format("%dm %ds", minutes, seconds % 60)
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/shahnawaz/Desktop/AuraView/app/src/main/java/com/auraview/adblocker/vpn/VpnStateManager.kt:131: Warning: Implicitly using the default locale is a common source of bugs: Use String.format(Locale, ...) instead [DefaultLocale]
+            else -> String.format("%ds", seconds)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/shahnawaz/Desktop/AuraView/app/src/main/java/com/auraview/adblocker/vpn/VpnStateManager.kt:141: Warning: Implicitly using the default locale is a common source of bugs: Use String.format(Locale, ...) instead [DefaultLocale]
+            gb >= 1 -> String.format("%.1f GB", gb)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/shahnawaz/Desktop/AuraView/app/src/main/java/com/auraview/adblocker/vpn/VpnStateManager.kt:142: Warning: Implicitly using the default locale is a common source of bugs: Use String.format(Locale, ...) instead [DefaultLocale]
+            mb >= 1 -> String.format("%.1f MB", mb)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/shahnawaz/Desktop/AuraView/app/src/main/java/com/auraview/adblocker/vpn/VpnStateManager.kt:143: Warning: Implicitly using the default locale is a common source of bugs: Use String.format(Locale, ...) instead [DefaultLocale]
+            kb >= 1 -> String.format("%.1f KB", kb)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/shahnawaz/Desktop/AuraView/app/src/main/java/com/auraview/adblocker/vpn/VpnStateManager.kt:144: Warning: Implicitly using the default locale is a common source of bugs: Use String.format(Locale, ...) instead [DefaultLocale]
+            else -> String.format("%d B", bytes)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "DefaultLocale":
+   Calling String#toLowerCase() or #toUpperCase() without specifying an
+   explicit locale is a common source of bugs. The reason for that is that
+   those methods will use the current locale on the user's device, and even
+   though the code appears to work correctly when you are developing the app,
+   it will fail in some locales. For example, in the Turkish locale, the
+   uppercase replacement for i is not I.
+
+   If you want the methods to just perform ASCII replacement, for example to
+   convert an enum name, call String#toUpperCase(Locale.ROOT) instead. If you
+   really want to use the current locale, call
+   String#toUpperCase(Locale.getDefault()) instead.
+
+   https://developer.android.com/reference/java/util/Locale.html#default_locale
+
+/Users/shahnawaz/Desktop/AuraView/app/src/main/java/com/auraview/adblocker/ui/fragments/HomeFragment.kt:100: Error: Call requires API level 23 (current min is 21): android.content.res.Resources#getColor [NewApi]
+                    vpnStatusText.setTextColor(resources.getColor(R.color.vpn_active, null))
+                                                         ~~~~~~~~
+/Users/shahnawaz/Desktop/AuraView/app/src/main/java/com/auraview/adblocker/ui/fragments/HomeFragment.kt:106: Error: Call requires API level 23 (current min is 21): android.content.res.Resources#getColor [NewApi]
+                    vpnStatusText.setTextColor(resources.getColor(R.color.vpn_connecting, null))
+                                                         ~~~~~~~~
+/Users/shahnawaz/Desktop/AuraView/app/src/main/java/com/auraview/adblocker/ui/fragments/HomeFragment.kt:112: Error: Call requires API level 23 (current min is 21): android.content.res.Resources#getColor [NewApi]
+                    vpnStatusText.setTextColor(resources.getColor(R.color.vpn_inactive, null))
+                                                         ~~~~~~~~
+/Users/shahnawaz/Desktop/AuraView/app/src/main/java/com/auraview/adblocker/ui/fragments/HomeFragment.kt:118: Error: Call requires API level 23 (current min is 21): android.content.res.Resources#getColor [NewApi]
+                    vpnStatusText.setTextColor(resources.getColor(R.color.error, null))
+                                                         ~~~~~~~~
+/Users/shahnawaz/Desktop/AuraView/app/src/main/java/com/auraview/adblocker/ui/fragments/HomeFragment.kt:124: Error: Call requires API level 23 (current min is 21): android.content.res.Resources#getColor [NewApi]
+                    vpnStatusText.setTextColor(resources.getColor(R.color.vpn_inactive, null))
+                                                         ~~~~~~~~
+/Users/shahnawaz/Desktop/AuraView/app/src/main/java/com/auraview/adblocker/stats/QueryLogger.kt:145: Error: Call requires API level 24, or core library desugaring (current min is 21): java.util.concurrent.ConcurrentHashMap#computeIfAbsent [NewApi]
+        val stat = domainStats.computeIfAbsent(normalizedDomain) { DomainStat(it) }
+                               ~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "NewApi":
+   This check scans through all the Android API calls in the application and
+   warns about any calls that are not available on all versions targeted by
+   this application (according to its minimum SDK attribute in the manifest).
+
+   If you really want to use this API and don't need to support older devices
+   just set the minSdkVersion in your build.gradle or AndroidManifest.xml
+   files.
+
+   If your code is deliberately accessing newer APIs, and you have ensured
+   (e.g. with conditional execution) that this code will only ever be called
+   on a supported platform, then you can annotate your class or method with
+   the @TargetApi annotation specifying the local minimum SDK to apply, such
+   as @TargetApi(11), such that this check considers 11 rather than your
+   manifest file's minimum SDK as the required API level.
+
+   If you are deliberately setting android: attributes in style definitions,
+   make sure you place this in a values-vNN folder in order to avoid running
+   into runtime conflicts on certain devices where manufacturers have added
+   custom attributes whose ids conflict with the new ones on later platforms.
+
+   Similarly, you can use tools:targetApi="11" in an XML file to indicate that
+   the element will only be inflated in an adequate context.
+
+/Users/shahnawaz/Desktop/AuraView/app/build.gradle:14: Warning: Not targeting the latest versions of Android; compatibility modes apply. Consider testing and updating this version. Consult the android.os.Build.VERSION_CODES javadoc for details. [OldTargetApi]
+        targetSdk 34
+        ~~~~~~~~~~~~
+
+   Explanation for issues of type "OldTargetApi":
+   When your application or sdk runs on a version of Android that is more
+   recent than your targetSdkVersion specifies that it has been tested with,
+   various compatibility modes kick in. This ensures that your application
+   continues to work, but it may look out of place. For example, if the
+   targetSdkVersion is less than 14, your app may get an option button in the
+   UI.
+
+   To fix this issue, set the targetSdkVersion to the highest available value.
+   Then test your app to make sure everything works correctly. You may want to
+   consult the compatibility notes to see what changes apply to each version
+   you are adding support for:
+   https://developer.android.com/reference/android/os/Build.VERSION_CODES.html
+   as well as follow this guide:
+   https://developer.android.com/distribute/best-practices/develop/target-sdk.
+   html
+
+   https://developer.android.com/distribute/best-practices/develop/target-sdk.html
+
+/Users/shahnawaz/Desktop/AuraView/app/src/main/java/com/auraview/adblocker/vpn/AuraViewVpnService.kt:89: Error: To call Service.startForeground(), the <service> element of manifest file must have the foregroundServiceType attribute specified [ForegroundServiceType]
+                startForeground(NOTIFICATION_ID, createNotification())
+                ~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "ForegroundServiceType":
+   For targetSdkVersion >= 34, to call Service.startForeground(), the
+   <service> element in the manifest file must have the foregroundServiceType
+   attribute specified.
+
+/Users/shahnawaz/Desktop/AuraView/app/src/main/java/com/auraview/adblocker/ui/fragments/SettingsFragment.kt:21: Warning: Use SwitchCompat from AppCompat or SwitchMaterial from Material library [UseSwitchCompatOrMaterialCode from androidx.appcompat]
+    // Settings switches
+    ^
+/Users/shahnawaz/Desktop/AuraView/app/src/main/java/com/auraview/adblocker/ui/fragments/SettingsFragment.kt:23: Warning: Use SwitchCompat from AppCompat or SwitchMaterial from Material library [UseSwitchCompatOrMaterialCode from androidx.appcompat]
+    private lateinit var blockUdpSwitch: Switch
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "UseSwitchCompatOrMaterialCode":
+   Use SwitchCompat from AppCompat or SwitchMaterial from Material library
+
+   Vendor: Android Open Source Project
+   Identifier: androidx.appcompat
+   Feedback: https://issuetracker.google.com/issues/new?component=460343
+
+/Users/shahnawaz/Desktop/AuraView/gradle/wrapper/gradle-wrapper.properties:3: Warning: A newer version of Gradle than 8.13 is available: 8.14.3 [AndroidGradlePluginVersion]
+distributionUrl=https\://services.gradle.org/distributions/gradle-8.13-bin.zip
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "AndroidGradlePluginVersion":
+   This detector looks for usage of the Android Gradle Plugin where the
+   version you are using is not the current stable release. Using older
+   versions is fine, and there are cases where you deliberately want to stick
+   with an older version. However, you may simply not be aware that a more
+   recent version is available, and that is what this lint check helps find.
+
+/Users/shahnawaz/Desktop/AuraView/app/build.gradle:9: Warning: A newer version of compileSdkVersion than 34 is available: 36 [GradleDependency]
+    compileSdk 34
+    ~~~~~~~~~~~~~
+/Users/shahnawaz/Desktop/AuraView/app/build.gradle:44: Warning: A newer version of androidx.leanback:leanback than 1.2.0-alpha04 is available: 1.2.0 [GradleDependency]
+    implementation 'androidx.leanback:leanback:1.2.0-alpha04'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/shahnawaz/Desktop/AuraView/app/build.gradle:45: Warning: A newer version of androidx.tvprovider:tvprovider than 1.0.0 is available: 1.1.0 [GradleDependency]
+    implementation 'androidx.tvprovider:tvprovider:1.0.0'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/shahnawaz/Desktop/AuraView/app/build.gradle:48: Warning: A newer version of androidx.core:core-ktx than 1.12.0 is available: 1.17.0 [GradleDependency]
+    implementation 'androidx.core:core-ktx:1.12.0'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/shahnawaz/Desktop/AuraView/app/build.gradle:49: Warning: A newer version of androidx.appcompat:appcompat than 1.6.1 is available: 1.7.1 [GradleDependency]
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/shahnawaz/Desktop/AuraView/app/build.gradle:50: Warning: A newer version of com.google.android.material:material than 1.11.0 is available: 1.13.0 [GradleDependency]
+    implementation 'com.google.android.material:material:1.11.0'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/shahnawaz/Desktop/AuraView/app/build.gradle:51: Warning: A newer version of androidx.constraintlayout:constraintlayout than 2.1.4 is available: 2.2.1 [GradleDependency]
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/shahnawaz/Desktop/AuraView/app/build.gradle:54: Warning: A newer version of androidx.lifecycle:lifecycle-viewmodel-ktx than 2.7.0 is available: 2.9.4 [GradleDependency]
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/shahnawaz/Desktop/AuraView/app/build.gradle:55: Warning: A newer version of androidx.lifecycle:lifecycle-livedata-ktx than 2.7.0 is available: 2.9.4 [GradleDependency]
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.7.0'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/shahnawaz/Desktop/AuraView/app/build.gradle:62: Warning: A newer version of androidx.room:room-runtime than 2.6.1 is available: 2.8.3 [GradleDependency]
+    implementation 'androidx.room:room-runtime:2.6.1'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/shahnawaz/Desktop/AuraView/app/build.gradle:63: Warning: A newer version of androidx.room:room-ktx than 2.6.1 is available: 2.8.3 [GradleDependency]
+    implementation 'androidx.room:room-ktx:2.6.1'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/shahnawaz/Desktop/AuraView/app/build.gradle:64: Warning: A newer version of androidx.room:room-compiler than 2.6.1 is available: 2.8.3 [GradleDependency]
+    kapt 'androidx.room:room-compiler:2.6.1'
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/shahnawaz/Desktop/AuraView/app/build.gradle:67: Warning: A newer version of androidx.work:work-runtime-ktx than 2.9.0 is available: 2.11.0 [GradleDependency]
+    implementation 'androidx.work:work-runtime-ktx:2.9.0'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/shahnawaz/Desktop/AuraView/app/build.gradle:80: Warning: A newer version of androidx.test.ext:junit than 1.1.5 is available: 1.3.0 [GradleDependency]
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/shahnawaz/Desktop/AuraView/app/build.gradle:81: Warning: A newer version of androidx.test.espresso:espresso-core than 3.5.1 is available: 3.7.0 [GradleDependency]
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "GradleDependency":
+   This detector looks for usages of libraries where the version you are using
+   is not the current stable release. Using older versions is fine, and there
+   are cases where you deliberately want to stick with an older version.
+   However, you may simply not be aware that a more recent version is
+   available, and that is what this lint check helps find.
+
+/Users/shahnawaz/Desktop/AuraView/app/build.gradle:59: Warning: A newer version of dnsjava:dnsjava than 3.5.1 is available: 3.6.3 [NewerVersionAvailable]
+    implementation 'dnsjava:dnsjava:3.5.1'
+                   ~~~~~~~~~~~~~~~~~~~~~~~
+/Users/shahnawaz/Desktop/AuraView/app/build.gradle:70: Warning: A newer version of org.jetbrains.kotlinx:kotlinx-coroutines-android than 1.7.3 is available: 1.10.2 [NewerVersionAvailable]
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/shahnawaz/Desktop/AuraView/app/build.gradle:73: Warning: A newer version of com.squareup.okhttp3:okhttp than 4.12.0 is available: 5.3.0 [NewerVersionAvailable]
+    implementation 'com.squareup.okhttp3:okhttp:4.12.0'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/shahnawaz/Desktop/AuraView/app/build.gradle:76: Warning: A newer version of com.google.code.gson:gson than 2.10.1 is available: 2.13.2 [NewerVersionAvailable]
+    implementation 'com.google.code.gson:gson:2.10.1'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "NewerVersionAvailable":
+   This detector checks with a central repository to see if there are newer
+   versions available for the dependencies used by this project. This is
+   similar to the GradleDependency check, which checks for newer versions
+   available in the Android SDK tools and libraries, but this works with any
+   MavenCentral dependency, and connects to the library every time, which
+   makes it more flexible but also much slower.
+
+/Users/shahnawaz/Desktop/AuraView/app/src/main/java/com/auraview/adblocker/ui/fragments/HomeFragment.kt:138: Error: Format string 'ads_blocked' is not a valid format string so it should not be passed to String.format [StringFormatInvalid]
+                    adsBlockedText.text = getString(R.string.ads_blocked, stats.blockedQueries)
+                                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    /Users/shahnawaz/Desktop/AuraView/app/src/main/res/values/strings.xml:15: This definition does not require arguments
+/Users/shahnawaz/Desktop/AuraView/app/src/main/java/com/auraview/adblocker/ui/fragments/HomeFragment.kt:138: Error: Format string 'ads_blocked' is not a valid format string so it should not be passed to String.format [StringFormatInvalid]
+                    adsBlockedText.text = getString(R.string.ads_blocked, stats.blockedQueries)
+                                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    /Users/shahnawaz/Desktop/AuraView/app/src/main/res/values/strings.xml:15: This definition does not require arguments
+/Users/shahnawaz/Desktop/AuraView/app/src/main/java/com/auraview/adblocker/ui/fragments/HomeFragment.kt:144: Error: Format string 'ads_blocked' is not a valid format string so it should not be passed to String.format [StringFormatInvalid]
+                    adsBlockedText.text = getString(R.string.ads_blocked, 0)
+                                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    /Users/shahnawaz/Desktop/AuraView/app/src/main/res/values/strings.xml:15: This definition does not require arguments
+/Users/shahnawaz/Desktop/AuraView/app/src/main/java/com/auraview/adblocker/ui/fragments/HomeFragment.kt:144: Error: Format string 'ads_blocked' is not a valid format string so it should not be passed to String.format [StringFormatInvalid]
+                    adsBlockedText.text = getString(R.string.ads_blocked, 0)
+                                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    /Users/shahnawaz/Desktop/AuraView/app/src/main/res/values/strings.xml:15: This definition does not require arguments
+/Users/shahnawaz/Desktop/AuraView/app/src/main/java/com/auraview/adblocker/ui/fragments/HomeFragment.kt:145: Error: Format string 'bandwidth_saved' is not a valid format string so it should not be passed to String.format [StringFormatInvalid]
+                    dataSavedText.text = getString(R.string.bandwidth_saved, "0 MB")
+                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    /Users/shahnawaz/Desktop/AuraView/app/src/main/res/values/strings.xml:17: This definition does not require arguments
+/Users/shahnawaz/Desktop/AuraView/app/src/main/java/com/auraview/adblocker/ui/fragments/HomeFragment.kt:145: Error: Format string 'bandwidth_saved' is not a valid format string so it should not be passed to String.format [StringFormatInvalid]
+                    dataSavedText.text = getString(R.string.bandwidth_saved, "0 MB")
+                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    /Users/shahnawaz/Desktop/AuraView/app/src/main/res/values/strings.xml:17: This definition does not require arguments
+/Users/shahnawaz/Desktop/AuraView/app/src/main/java/com/auraview/adblocker/ui/fragments/HomeFragment.kt:157: Error: Format string 'bandwidth_saved' is not a valid format string so it should not be passed to String.format [StringFormatInvalid]
+            gb >= 1 -> getString(R.string.bandwidth_saved, String.format("%.1f GB", gb))
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    /Users/shahnawaz/Desktop/AuraView/app/src/main/res/values/strings.xml:17: This definition does not require arguments
+/Users/shahnawaz/Desktop/AuraView/app/src/main/java/com/auraview/adblocker/ui/fragments/HomeFragment.kt:158: Error: Format string 'bandwidth_saved' is not a valid format string so it should not be passed to String.format [StringFormatInvalid]
+            mb >= 1 -> getString(R.string.bandwidth_saved, String.format("%.1f MB", mb))
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    /Users/shahnawaz/Desktop/AuraView/app/src/main/res/values/strings.xml:17: This definition does not require arguments
+/Users/shahnawaz/Desktop/AuraView/app/src/main/java/com/auraview/adblocker/ui/fragments/HomeFragment.kt:159: Error: Format string 'bandwidth_saved' is not a valid format string so it should not be passed to String.format [StringFormatInvalid]
+            kb >= 1 -> getString(R.string.bandwidth_saved, String.format("%.1f KB", kb))
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    /Users/shahnawaz/Desktop/AuraView/app/src/main/res/values/strings.xml:17: This definition does not require arguments
+/Users/shahnawaz/Desktop/AuraView/app/src/main/java/com/auraview/adblocker/ui/fragments/HomeFragment.kt:160: Error: Format string 'bandwidth_saved' is not a valid format string so it should not be passed to String.format [StringFormatInvalid]
+            else -> getString(R.string.bandwidth_saved, String.format("%d B", bytes))
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    /Users/shahnawaz/Desktop/AuraView/app/src/main/res/values/strings.xml:17: This definition does not require arguments
+
+   Explanation for issues of type "StringFormatInvalid":
+   If a string contains a '%' character, then the string may be a formatting
+   string which will be passed to String.format from Java code to replace each
+   '%' occurrence with specific values.
+
+   This lint warning checks for two related problems:
+   (1) Formatting strings that are invalid, meaning that String.format will
+   throw exceptions at runtime when attempting to use the format string.
+   (2) Strings containing '%' that are not formatting strings getting passed
+   to a String.format call. In this case the '%' will need to be escaped as
+   '%%'.
+
+   NOTE: Not all Strings which look like formatting strings are intended for
+   use by String.format; for example, they may contain date formats intended
+   for android.text.format.Time#format(). Lint cannot always figure out that a
+   String is a date format, so you may get false warnings in those scenarios.
+   See the suppress help topic for information on how to suppress errors in
+   that case.
+
+/Users/shahnawaz/Desktop/AuraView/app/src/main/res/values/strings.xml:79: Warning: Formatting %d followed by words ("rules"): This should probably be a plural rather than a string [PluralsCandidate]
+    <string name="filter_rule_count">%d rules</string>
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "PluralsCandidate":
+   This lint check looks for potential errors in internationalization where
+   you have translated a message which involves a quantity and it looks like
+   other parts of the string may need grammatical changes.
+
+   For example, rather than something like this:
+     <string name="try_again">Try again in %d seconds.</string>
+   you should be using a plural:
+      <plurals name="try_again">
+           <item quantity="one">Try again in %d second</item>
+           <item quantity="other">Try again in %d seconds</item>
+       </plurals>
+   This will ensure that in other languages the right set of translations are
+   provided for the different quantity classes.
+
+   (This check depends on some heuristics, so it may not accurately determine
+   whether a string really should be a quantity. You can use tools:ignore to
+   filter out false positives.
+
+   https://developer.android.com/guide/topics/resources/string-resource.html#Plurals
+
+/Users/shahnawaz/Desktop/AuraView/app/src/main/java/com/auraview/adblocker/ui/fragments/FilterManagementFragment.kt:191: Warning: It will always be more efficient to use more specific change events if you can. Rely on notifyDataSetChanged as a last resort. [NotifyDataSetChanged]
+            notifyDataSetChanged()
+            ~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "NotifyDataSetChanged":
+   The RecyclerView adapter's onNotifyDataSetChanged method does not specify
+   what about the data set has changed, forcing any observers to assume that
+   all existing items and structure may no longer be valid. `LayoutManager`s
+   will be forced to fully rebind and relayout all visible views.
+
+/Users/shahnawaz/Desktop/AuraView/app/src/main/res/values/themes.xml:13: Warning: Unnecessary; SDK_INT is always >= 21 [ObsoleteSdkInt]
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+                                            ~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "ObsoleteSdkInt":
+   This check flags version checks that are not necessary, because the
+   minSdkVersion (or surrounding known API level) is already at least as high
+   as the version checked for.
+
+   Similarly, it also looks for resources in -vNN folders, such as values-v14
+   where the version qualifier is less than or equal to the minSdkVersion,
+   where the contents should be merged into the best folder.
+
+/Users/shahnawaz/Desktop/AuraView/app/src/main/java/com/auraview/adblocker/vpn/VpnController.kt:30: Warning: Do not place Android context classes in static fields (static reference to VpnController which has field context pointing to Context); this is a memory leak [StaticFieldLeak]
+        private var instance: VpnController? = null
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "StaticFieldLeak":
+   A static field will leak contexts.
+
+   Non-static inner classes have an implicit reference to their outer class.
+   If that outer class is for example a Fragment or Activity, then this
+   reference means that the long-running handler/loader/task will hold a
+   reference to the activity which prevents it from getting garbage
+   collected.
+
+   Similarly, direct field references to activities and fragments from these
+   longer running instances can cause leaks.
+
+   ViewModel classes should never point to Views or non-application Contexts.
+
+/Users/shahnawaz/Desktop/AuraView/app/build.gradle:64: Warning: This library supports using KSP instead of kapt, which greatly improves performance. Learn more: https://developer.android.com/studio/build/migrate-to-ksp [KaptUsageInsteadOfKsp]
+    kapt 'androidx.room:room-compiler:2.6.1'
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "KaptUsageInsteadOfKsp":
+   KSP is a more efficient replacement for kapt. For libraries that support
+   both, KSP should be used to improve build times.
+
+   https://developer.android.com/studio/build/migrate-to-ksp
+
+/Users/shahnawaz/Desktop/AuraView/app/src/main/res/layout/activity_main.xml:7: Warning: Possible overdraw: Root element paints background @color/background with a theme that also paints a background (inferred theme is @style/Theme_AuraView_Leanback) [Overdraw]
+    android:background="@color/background"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/shahnawaz/Desktop/AuraView/app/src/main/res/layout/fragment_filter_management.xml:6: Warning: Possible overdraw: Root element paints background @color/background with a theme that also paints a background (inferred theme is @style/Theme.AuraView) [Overdraw]
+    android:background="@color/background"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/shahnawaz/Desktop/AuraView/app/src/main/res/layout/fragment_home.xml:7: Warning: Possible overdraw: Root element paints background @color/background with a theme that also paints a background (inferred theme is @style/Theme.AuraView) [Overdraw]
+    android:background="@color/background"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/shahnawaz/Desktop/AuraView/app/src/main/res/layout/fragment_settings.xml:6: Warning: Possible overdraw: Root element paints background @color/background with a theme that also paints a background (inferred theme is @style/Theme.AuraView) [Overdraw]
+    android:background="@color/background"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/shahnawaz/Desktop/AuraView/app/src/main/res/layout/fragment_statistics.xml:7: Warning: Possible overdraw: Root element paints background @color/background with a theme that also paints a background (inferred theme is @style/Theme.AuraView) [Overdraw]
+    android:background="@color/background"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "Overdraw":
+   If you set a background drawable on a root view, then you should use a
+   custom theme where the theme background is null. Otherwise, the theme
+   background will be painted first, only to have your custom background
+   completely cover it; this is called "overdraw".
+
+   NOTE: This detector relies on figuring out which layouts are associated
+   with which activities based on scanning the Java code, and it's currently
+   doing that using an inexact pattern matching algorithm. Therefore, it can
+   incorrectly conclude which activity the layout is associated with and then
+   wrongly complain that a background-theme is hidden.
+
+   If you want your custom background on multiple pages, then you should
+   consider making a custom theme with your custom background and just using
+   that theme instead of a root element background.
+
+   Of course it's possible that your custom drawable is translucent and you
+   want it to be mixed with the background. However, you will get better
+   performance if you pre-mix the background with your drawable and use that
+   resulting image or color as a custom theme background instead.
+
+/Users/shahnawaz/Desktop/AuraView/app/src/main/res/values/colors.xml:11: Warning: The resource R.color.secondary_light appears to be unused [UnusedResources]
+    <color name="secondary_light">#FF8F00</color>
+           ~~~~~~~~~~~~~~~~~~~~~~
+/Users/shahnawaz/Desktop/AuraView/app/src/main/res/values/colors.xml:15: Warning: The resource R.color.background_dark appears to be unused [UnusedResources]
+    <color name="background_dark">#000000</color>
+           ~~~~~~~~~~~~~~~~~~~~~~
+/Users/shahnawaz/Desktop/AuraView/app/src/main/res/values/colors.xml:16: Warning: The resource R.color.background_light appears to be unused [UnusedResources]
+    <color name="background_light">#1E1E1E</color>
+           ~~~~~~~~~~~~~~~~~~~~~~~
+/Users/shahnawaz/Desktop/AuraView/app/src/main/res/values/colors.xml:18: Warning: The resource R.color.surface_variant appears to be unused [UnusedResources]
+    <color name="surface_variant">#2D2D2D</color>
+           ~~~~~~~~~~~~~~~~~~~~~~
+/Users/shahnawaz/Desktop/AuraView/app/src/main/res/values/colors.xml:23: Warning: The resource R.color.text_hint appears to be unused [UnusedResources]
+    <color name="text_hint">#757575</color>
+           ~~~~~~~~~~~~~~~~
+/Users/shahnawaz/Desktop/AuraView/app/src/main/res/values/colors.xml:26: Warning: The resource R.color.success appears to be unused [UnusedResources]
+    <color name="success">#4CAF50</color>
+           ~~~~~~~~~~~~~~
+/Users/shahnawaz/Desktop/AuraView/app/src/main/res/values/colors.xml:27: Warning: The resource R.color.warning appears to be unused [UnusedResources]
+    <color name="warning">#FF9800</color>
+           ~~~~~~~~~~~~~~
+/Users/shahnawaz/Desktop/AuraView/app/src/main/res/values/colors.xml:29: Warning: The resource R.color.info appears to be unused [UnusedResources]
+    <color name="info">#2196F3</color>
+           ~~~~~~~~~~~
+/Users/shahnawaz/Desktop/AuraView/app/src/main/res/values/colors.xml:39: Warning: The resource R.color.transparent appears to be unused [UnusedResources]
+    <color name="transparent">#00000000</color>
+           ~~~~~~~~~~~~~~~~~~
+/Users/shahnawaz/Desktop/AuraView/app/src/main/res/values/colors.xml:48: Warning: The resource R.color.btn_secondary appears to be unused [UnusedResources]
+    <color name="btn_secondary">#FF6F00</color>
+           ~~~~~~~~~~~~~~~~~~~~
+/Users/shahnawaz/Desktop/AuraView/app/src/main/res/values/colors.xml:52: Warning: The resource R.color.filter_enabled appears to be unused [UnusedResources]
+    <color name="filter_enabled">#4CAF50</color>
+           ~~~~~~~~~~~~~~~~~~~~~
+/Users/shahnawaz/Desktop/AuraView/app/src/main/res/values/colors.xml:53: Warning: The resource R.color.filter_disabled appears to be unused [UnusedResources]
+    <color name="filter_disabled">#757575</color>
+           ~~~~~~~~~~~~~~~~~~~~~~
+/Users/shahnawaz/Desktop/AuraView/app/src/main/res/values/colors.xml:54: Warning: The resource R.color.filter_updating appears to be unused [UnusedResources]
+    <color name="filter_updating">#FF9800</color>
+           ~~~~~~~~~~~~~~~~~~~~~~
+/Users/shahnawaz/Desktop/AuraView/app/src/main/res/values/strings.xml:4: Warning: The resource R.string.app_description appears to be unused [UnusedResources]
+    <string name="app_description">Clear Vision, Ad-Free Streaming</string>
+            ~~~~~~~~~~~~~~~~~~~~~~
+/Users/shahnawaz/Desktop/AuraView/app/src/main/res/values/strings.xml:16: Warning: The resource R.string.data_saved appears to be unused [UnusedResources]
+    <string name="data_saved">Data Saved</string>
+            ~~~~~~~~~~~~~~~~~
+/Users/shahnawaz/Desktop/AuraView/app/src/main/res/values/strings.xml:18: Warning: The resource R.string.queries_blocked appears to be unused [UnusedResources]
+    <string name="queries_blocked">Queries Blocked</string>
+            ~~~~~~~~~~~~~~~~~~~~~~
+/Users/shahnawaz/Desktop/AuraView/app/src/main/res/values/strings.xml:19: Warning: The resource R.string.domains_blocked appears to be unused [UnusedResources]
+    <string name="domains_blocked">Domains Blocked</string>
+            ~~~~~~~~~~~~~~~~~~~~~~
+/Users/shahnawaz/Desktop/AuraView/app/src/main/res/values/strings.xml:26: Warning: The resource R.string.menu_whitelist appears to be unused [UnusedResources]
+    <string name="menu_whitelist">Whitelist</string>
+            ~~~~~~~~~~~~~~~~~~~~~
+/Users/shahnawaz/Desktop/AuraView/app/src/main/res/values/strings.xml:32: Warning: The resource R.string.btn_add_custom_filter appears to be unused [UnusedResources]
+    <string name="btn_add_custom_filter">Add Custom Filter</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/shahnawaz/Desktop/AuraView/app/src/main/res/values/strings.xml:34: Warning: The resource R.string.btn_cancel appears to be unused [UnusedResources]
+    <string name="btn_cancel">Cancel</string>
+            ~~~~~~~~~~~~~~~~~
+/Users/shahnawaz/Desktop/AuraView/app/src/main/res/values/strings.xml:42: Warning: The resource R.string.filter_badware appears to be unused [UnusedResources]
+    <string name="filter_badware">Badware</string>
+            ~~~~~~~~~~~~~~~~~~~~~
+/Users/shahnawaz/Desktop/AuraView/app/src/main/res/values/strings.xml:43: Warning: The resource R.string.filter_resource_abuse appears to be unused [UnusedResources]
+    <string name="filter_resource_abuse">Resource Abuse</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/shahnawaz/Desktop/AuraView/app/src/main/res/values/strings.xml:57: Warning: The resource R.string.msg_vpn_permission_required appears to be unused [UnusedResources]
+    <string name="msg_vpn_permission_required">VPN permission required for ad blocking</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/shahnawaz/Desktop/AuraView/app/src/main/res/values/strings.xml:60: Warning: The resource R.string.msg_no_internet appears to be unused [UnusedResources]
+    <string name="msg_no_internet">No internet connection</string>
+            ~~~~~~~~~~~~~~~~~~~~~~
+/Users/shahnawaz/Desktop/AuraView/app/src/main/res/values/strings.xml:61: Warning: The resource R.string.msg_service_starting appears to be unused [UnusedResources]
+    <string name="msg_service_starting">Starting protection service...</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/shahnawaz/Desktop/AuraView/app/src/main/res/values/strings.xml:62: Warning: The resource R.string.msg_service_stopping appears to be unused [UnusedResources]
+    <string name="msg_service_stopping">Stopping protection service...</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/shahnawaz/Desktop/AuraView/app/src/main/res/values/strings.xml:66: Warning: The resource R.string.stats_week appears to be unused [UnusedResources]
+    <string name="stats_week">This Week</string>
+            ~~~~~~~~~~~~~~~~~
+/Users/shahnawaz/Desktop/AuraView/app/src/main/res/values/strings.xml:67: Warning: The resource R.string.stats_month appears to be unused [UnusedResources]
+    <string name="stats_month">This Month</string>
+            ~~~~~~~~~~~~~~~~~~
+/Users/shahnawaz/Desktop/AuraView/app/src/main/res/values/strings.xml:72: Warning: The resource R.string.about_version appears to be unused [UnusedResources]
+    <string name="about_version">Version</string>
+            ~~~~~~~~~~~~~~~~~~~~
+/Users/shahnawaz/Desktop/AuraView/app/src/main/res/values/strings.xml:73: Warning: The resource R.string.about_developed_by appears to be unused [UnusedResources]
+    <string name="about_developed_by">Developed by</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/shahnawaz/Desktop/AuraView/app/src/main/res/values/strings.xml:74: Warning: The resource R.string.about_website appears to be unused [UnusedResources]
+    <string name="about_website">Website</string>
+            ~~~~~~~~~~~~~~~~~~~~
+/Users/shahnawaz/Desktop/AuraView/app/src/main/res/values/strings.xml:75: Warning: The resource R.string.about_privacy_policy appears to be unused [UnusedResources]
+    <string name="about_privacy_policy">Privacy Policy</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/shahnawaz/Desktop/AuraView/app/src/main/res/values/strings.xml:76: Warning: The resource R.string.about_open_source appears to be unused [UnusedResources]
+    <string name="about_open_source">Open Source</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/shahnawaz/Desktop/AuraView/app/src/main/res/values/strings.xml:81: Warning: The resource R.string.stats_data_saved appears to be unused [UnusedResources]
+    <string name="stats_data_saved">Data Saved</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~
+/Users/shahnawaz/Desktop/AuraView/app/src/main/res/values/themes.xml:30: Warning: The resource R.style.AuraViewCard appears to be unused [UnusedResources]
+    <style name="AuraViewCard">
+           ~~~~~~~~~~~~~~~~~~~
+/Users/shahnawaz/Desktop/AuraView/app/src/main/res/values/themes.xml:47: Warning: The resource R.style.AuraViewTitle appears to be unused [UnusedResources]
+    <style name="AuraViewTitle" parent="android:style/TextAppearance.Material.Headline">
+           ~~~~~~~~~~~~~~~~~~~~
+/Users/shahnawaz/Desktop/AuraView/app/src/main/res/values/themes.xml:53: Warning: The resource R.style.AuraViewSubtitle appears to be unused [UnusedResources]
+    <style name="AuraViewSubtitle" parent="android:style/TextAppearance.Material.Subhead">
+           ~~~~~~~~~~~~~~~~~~~~~~~
+/Users/shahnawaz/Desktop/AuraView/app/src/main/res/values/themes.xml:58: Warning: The resource R.style.AuraViewBody appears to be unused [UnusedResources]
+    <style name="AuraViewBody" parent="android:style/TextAppearance.Material.Body1">
+           ~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "UnusedResources":
+   Unused resources make applications larger and slow down builds.
+
+
+   The unused resource check can ignore tests. If you want to include
+   resources that are only referenced from tests, consider packaging them in a
+   test source set instead.
+
+   You can include test sources in the unused resource check by setting the
+   system property lint.unused-resources.include-tests =true, and to exclude
+   them (usually for performance reasons), use
+   lint.unused-resources.exclude-tests =true.
+   ,
+
+   Available options:
+
+   **skip-libraries** (default is true):
+   Whether the unused resource check should skip reporting unused resources in libraries.
+
+   Many libraries will declare resources that are part of the library surface; other modules depending on the library will also reference the resources. To avoid reporting all these resources as unused (in the context of a library), the unused resource check normally skips reporting unused resources in libraries. Instead, run the unused resource check on the consuming app module (along with `checkDependencies=true`).
+
+   However, there are cases where you want to check that all the resources declared in a library are used; in that case, you can disable the skip option.
+
+   To configure this option, use a `lint.xml` file with an <option> like this:
+
+   ```xml
+   <lint>
+       <issue id="UnusedResources">
+           <option name="skip-libraries" value="true" />
+       </issue>
+   </lint>
+   ```
+
+/Users/shahnawaz/Desktop/AuraView/app/src/main/res/values/strings.xml:11: Warning: Replace "..." with ellipsis character (…, &#8230;) ? [TypographyEllipsis]
+    <string name="vpn_connecting">Connecting...</string>
+                                  ~~~~~~~~~~~~~
+/Users/shahnawaz/Desktop/AuraView/app/src/main/res/values/strings.xml:58: Warning: Replace "..." with ellipsis character (…, &#8230;) ? [TypographyEllipsis]
+    <string name="msg_filters_updating">Updating filter lists...</string>
+                                        ~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/shahnawaz/Desktop/AuraView/app/src/main/res/values/strings.xml:61: Warning: Replace "..." with ellipsis character (…, &#8230;) ? [TypographyEllipsis]
+    <string name="msg_service_starting">Starting protection service...</string>
+                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/shahnawaz/Desktop/AuraView/app/src/main/res/values/strings.xml:62: Warning: Replace "..." with ellipsis character (…, &#8230;) ? [TypographyEllipsis]
+    <string name="msg_service_stopping">Stopping protection service...</string>
+                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "TypographyEllipsis":
+   You can replace the string "..." with a dedicated ellipsis character,
+   ellipsis character (u2026, &#8230;). This can help make the text more
+   readable.
+
+   https://en.wikipedia.org/wiki/Ellipsis
+
+/Users/shahnawaz/Desktop/AuraView/app/src/main/res: Warning: Missing density variation folders in src/main/res: drawable-hdpi, drawable-mdpi, drawable-xxhdpi [IconMissingDensityFolder]
+
+   Explanation for issues of type "IconMissingDensityFolder":
+   Icons will look best if a custom version is provided for each of the major
+   screen density classes (low, medium, high, extra-high, extra-extra-high).
+   This lint check identifies folders which are missing, such as
+   drawable-hdpi.
+
+   Low density is not really used much anymore, so this check ignores the ldpi
+   density. To force lint to include it, set the environment variable
+   ANDROID_LINT_INCLUDE_LDPI=true. For more information on current density
+   usage, see https://developer.android.com/about/dashboards
+
+   https://developer.android.com/guide/practices/screens_support.html
+
+/Users/shahnawaz/Desktop/AuraView/app/src/main/res/layout/fragment_statistics.xml:204: Warning: Avoid using sizes smaller than 11sp: 10sp [SmallSp]
+                        android:textSize="10sp" />
+                        ~~~~~~~~~~~~~~~~~~~~~~~
+/Users/shahnawaz/Desktop/AuraView/app/src/main/res/layout/fragment_statistics.xml:241: Warning: Avoid using sizes smaller than 11sp: 10sp [SmallSp]
+                        android:textSize="10sp" />
+                        ~~~~~~~~~~~~~~~~~~~~~~~
+/Users/shahnawaz/Desktop/AuraView/app/src/main/res/layout/fragment_statistics.xml:278: Warning: Avoid using sizes smaller than 11sp: 10sp [SmallSp]
+                        android:textSize="10sp" />
+                        ~~~~~~~~~~~~~~~~~~~~~~~
+/Users/shahnawaz/Desktop/AuraView/app/src/main/res/layout/fragment_statistics.xml:314: Warning: Avoid using sizes smaller than 11sp: 10sp [SmallSp]
+                        android:textSize="10sp" />
+                        ~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "SmallSp":
+   Avoid using sizes smaller than 11sp.
+
+/Users/shahnawaz/Desktop/AuraView/app/src/main/java/com/auraview/adblocker/stats/QueryLogger.kt:111: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+            prefs.edit().clear().apply()
+            ~~~~~~~~~~~~
+/Users/shahnawaz/Desktop/AuraView/app/src/main/java/com/auraview/adblocker/vpn/VpnStateManager.kt:65: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+        prefs.edit().putBoolean(KEY_AUTO_START, enabled).apply()
+        ~~~~~~~~~~~~
+/Users/shahnawaz/Desktop/AuraView/app/src/main/java/com/auraview/adblocker/vpn/VpnStateManager.kt:80: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+        prefs.edit().putLong(KEY_TOTAL_CONNECTION_TIME, newTotal).apply()
+        ~~~~~~~~~~~~
+/Users/shahnawaz/Desktop/AuraView/app/src/main/java/com/auraview/adblocker/vpn/VpnStateManager.kt:87: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+        prefs.edit().putInt(KEY_CONNECTION_COUNT, newCount).apply()
+        ~~~~~~~~~~~~
+/Users/shahnawaz/Desktop/AuraView/app/src/main/java/com/auraview/adblocker/vpn/VpnStateManager.kt:95: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+        prefs.edit()
+        ~~~~~~~~~~~~
+/Users/shahnawaz/Desktop/AuraView/app/src/main/java/com/auraview/adblocker/vpn/VpnStateManager.kt:105: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+        prefs.edit().putString(KEY_DNS_SERVER, server).apply()
+        ~~~~~~~~~~~~
+/Users/shahnawaz/Desktop/AuraView/app/src/main/java/com/auraview/adblocker/vpn/VpnStateManager.kt:115: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+        prefs.edit().putBoolean(KEY_BLOCK_UDP, enabled).apply()
+        ~~~~~~~~~~~~
+
+   Explanation for issues of type "UseKtx":
+   The Android KTX libraries decorates the Android platform SDK as well as
+   various libraries with more convenient extension functions available from
+   Kotlin, allowing you to use default parameters, named parameters, and
+   more.
+
+   Available options:
+
+   **remove-defaults** (default is true):
+   Whether to skip arguments that match the defaults provided by the extension.
+
+   Extensions often provide default values for some of the parameters. For example:
+   ```kotlin
+   fun Path.readLines(charset: Charset = Charsets.UTF_8): List<String> { return Files.readAllLines(this, charset) }
+   ```
+   This lint check will by default automatically omit parameters that match the default, so if your code was calling
+
+   ```kotlin
+   Files.readAllLines(file, Charset.UTF_8)
+   ```
+   lint would replace this with
+   ```kotlin
+   file.readLines()
+   ```
+   rather than
+
+   ```kotlin
+   file.readLines(Charset.UTF_8
+   ```
+   You can turn this behavior off using this option.
+
+   To configure this option, use a `lint.xml` file with an <option> like this:
+
+   ```xml
+   <lint>
+       <issue id="UseKtx">
+           <option name="remove-defaults" value="true" />
+       </issue>
+   </lint>
+   ```
+
+   **require-present** (default is true):
+   Whether to only offer extensions already available.
+
+   This option lets you only have lint suggest extension replacements if those extensions are already available on the class path (in other words, you're already depending on the library containing the extension method.)
+
+   To configure this option, use a `lint.xml` file with an <option> like this:
+
+   ```xml
+   <lint>
+       <issue id="UseKtx">
+           <option name="require-present" value="true" />
+       </issue>
+   </lint>
+   ```
+
+/Users/shahnawaz/Desktop/AuraView/app/src/main/java/com/auraview/adblocker/ui/fragments/StatisticsFragment.kt:173: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+        totalTimeText.text = "0s"
+                              ~~
+/Users/shahnawaz/Desktop/AuraView/app/src/main/java/com/auraview/adblocker/ui/fragments/StatisticsFragment.kt:176: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+        vpnTotalTimeText.text = "0s"
+                                 ~~
+
+   Explanation for issues of type "SetTextI18n":
+   When calling TextView#setText
+   * Never call Number#toString() to format numbers; it will not handle
+   fraction separators and locale-specific digits properly. Consider using
+   String#format with proper format specifications (%d or %f) instead.
+   * Do not pass a string literal (e.g. "Hello") to display text. Hardcoded
+   text can not be properly translated to other languages. Consider using
+   Android resource strings instead.
+   * Do not build messages by concatenating text chunks. Such messages can not
+   be properly translated.
+
+   https://developer.android.com/guide/topics/resources/localization.html
+
+/Users/shahnawaz/Desktop/AuraView/app/src/main/res/layout/fragment_statistics.xml:327: Warning: Hardcoded string "VPN Statistics", should use @string resource [HardcodedText]
+            android:text="VPN Statistics"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/shahnawaz/Desktop/AuraView/app/src/main/res/layout/item_filter.xml:52: Warning: Hardcoded string "Enabled", should use @string resource [HardcodedText]
+            android:text="Enabled"
+            ~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "HardcodedText":
+   Hardcoding text attributes directly in layout files is bad for several
+   reasons:
+
+   * When creating configuration variations (for example for landscape or
+   portrait) you have to repeat the actual text (and keep it up to date when
+   making changes)
+
+   * The application cannot be translated to other languages by just adding
+   new translations for existing string resources.
+
+   There are quickfixes to automatically extract this hardcoded string into a
+   resource lookup.
+
+17 errors, 102 warnings
